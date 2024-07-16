@@ -6,7 +6,7 @@ router.post('/create', createUser);
 router.put('/:id', updateUser);
 router.get('/', getAllUsers);
 router.get('/:id', getUser);
-router.delete('/id', deleteUser);
+router.delete('/:id', deleteUser);
 router.post('/auth', signInUser);
 
 export default router;

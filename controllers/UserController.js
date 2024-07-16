@@ -54,15 +54,16 @@ export const deleteUser=async(req, res)=>{
 export const updateUser=async(req, res)=>{
     try {
         const {id} = req.params;
-        const {password} = req.body;
-        const salt = bcrypt.genSaltSync(10);
-        const hash = bcrypt.hashSync(password, salt)
-        const user =  await User.findByIdAndUpdate(id,
-            {$set:{...req.body, password:hash}}, {new:true}
+        // const {password} = req.body;
+        let user;
+        user =  await User.findByIdAndUpdate(id,
+            {$set:req.body}, {new:true}
         );
-        res.status(200).json(user);
+        
+        const  {password, ...others} = user._doc;
+        res.status(200).json({...others});
     } catch (error) {
-        console.log('Could not delete user, error occured');
+        console.log('Could not update user, error occured');
         console.log(error)
     }
 }
@@ -71,6 +72,7 @@ export const updateUser=async(req, res)=>{
 export const signInUser = async(req, res)=>{
     try {
         const {email, password} = req.body;
+        // console.log(email)
         const isUser = await User.findOne({email});
         // check if user exists
         if(!isUser){
