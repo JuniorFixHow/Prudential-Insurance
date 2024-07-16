@@ -6,7 +6,10 @@ const UserSchema = new mongoose.Schema({
     role:String,
     title:String,
     gender:String,
-    photo:String,
+    photo:{
+        type:String,
+        default:'https://cdn-icons-png.flaticon.com/512/9187/9187604.png'
+    },
     lcd:String,
     email:{
         type:String,
