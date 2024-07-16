@@ -112,7 +112,7 @@ const Profile = () => {
         <Alert onClose={()=>setFeedback({error:false, message:''})} severity={feedback.error ? 'error':'success'} className="absolute top-8" >{feedback.message}</Alert>
       }
       <div className="py-4 w-full bg-white shadow-md flex flex-row justify-center">
-        <span className='font-semibold w-5/6 text-[1rem] md:text-2xl' >Account Details</span>
+        <span className='font-semibold w-5/6 text-[1rem] md:text-2xl overflow-y-hidden' >Account Details</span>
       </div>
       <div className="w-[90%] lg:w-5/6 flex flex-col gap-6 items-center">
         <div className="w-full gap-4 p-4 flex flex-row items-center bg-white border border-gray-200 rounded-xl">
