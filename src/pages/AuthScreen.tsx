@@ -4,7 +4,7 @@ import LoginSingup from "../components/Login"
 function AuthScreen() {
   return (
     <div className='w-full self-center justify-center flex-row flex h-screen' >
-        <div className="hidden px-16 justify-center flex-col  lg:flex w-1/2 h-full">
+        <div className="hidden px-16 items-center justify-center flex-col  lg:flex w-1/2 h-full">
             <img className="w-full" src='/imgs/undraw_online_test_re_kyfx.svg' alt="welcome logo" />
             <div className="flex mt-8 flex-col">
                 <span className='font-semibold text-2xl' >Welcome back to Prudential!</span>

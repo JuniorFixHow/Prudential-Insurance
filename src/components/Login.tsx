@@ -92,13 +92,13 @@ function LoginSingup() {
             <span className="text-[0.8rem] md:text-[1rem] text-gray-400" >{loginMode ? 'Manage your data':'You will modify your data later'}</span>
         </div>
         <form onSubmit={loginMode ? handleLogin:handleSignup} className="flex gap-4 items-center w-full flex-col">
-            <div className="flex p-2 flex-row gap-4 bg-slate-200 w-80 md:w-full rounded-xl">
+            <div className="flex p-2 flex-row gap-4 bg-slate-200 w-full rounded-xl">
                 <div className="p-2 bg-white rounded-lg">
                     <AiOutlineMail color='blue' />
                 </div>
                 <input onChange={(e)=>setEmail(e.target.value)} className='px-2 grow bg-transparent border-none outline-none' placeholder='enter email' type="email" required />
             </div>
-            <div className="flex p-2 items-center flex-row gap-4 bg-slate-200 w-80 md:w-full rounded-xl">
+            <div className="flex p-2 items-center flex-row gap-4 bg-slate-200 w-full rounded-xl">
                 <div className="p-2 bg-white rounded-lg">
                     <IoLockClosedOutline color='blue' />
                 </div>
@@ -112,7 +112,7 @@ function LoginSingup() {
             </div>
             {
                 !loginMode &&
-                <div className="flex p-2 items-center flex-row gap-4 bg-slate-200 w-80 md:w-full rounded-xl">
+                <div className="flex p-2 items-center flex-row gap-4 bg-slate-200 w-full rounded-xl">
                     <div className="p-2 bg-white rounded-lg">
                         <IoLockClosedOutline color='blue' />
                     </div>
@@ -131,9 +131,9 @@ function LoginSingup() {
             }
             {
                 loginMode ?
-                <button disabled={isLoading} className={`${(isLoading && loginMode) ? 'bg-slate-500':'bg-[#1578FB]'} w-80 md:w-full text-white text-xl py-2 rounded-xl border-none hover:bg-blue-500`} type='submit' >{(isLoading && loginMode) ? 'Loading...':'Login'}</button>
+                <button disabled={isLoading} className={`${(isLoading && loginMode) ? 'bg-slate-500':'bg-[#1578FB]'} w-full text-white text-xl py-2 rounded-xl border-none hover:bg-blue-500`} type='submit' >{(isLoading && loginMode) ? 'Loading...':'Login'}</button>
                 :
-                <button disabled={isLoading} className={`${(isLoading && !loginMode) ? 'bg-slate-500':'bg-[#1578FB]'} w-80 md:w-full text-white text-xl py-2 rounded-xl border-none hover:bg-blue-500`} type='submit' >{(isLoading && !loginMode) ? 'Loading...':'Sign up'}</button>
+                <button disabled={isLoading} className={`${(isLoading && !loginMode) ? 'bg-slate-500':'bg-[#1578FB]'} w-full text-white text-xl py-2 rounded-xl border-none hover:bg-blue-500`} type='submit' >{(isLoading && !loginMode) ? 'Loading...':'Sign up'}</button>
             }
             {
                 loginMode ?
