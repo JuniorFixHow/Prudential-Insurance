@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import  Alert  from '@mui/material/Alert';
 import { AuthContext } from '../context/AuthContext';
 
-type LoginProps = {
+export type LoginProps = {
     username:string,
     password:string
 }

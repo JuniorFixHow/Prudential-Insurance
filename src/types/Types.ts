@@ -6,7 +6,6 @@ export type FeedbackProps = {
 export type UserProps={
     name:string,
     email:string,
-    username?:string,
     password:string,
     lcd:string,
     role:string,

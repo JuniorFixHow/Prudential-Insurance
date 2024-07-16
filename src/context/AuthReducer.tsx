@@ -1,14 +1,14 @@
-import { UserProps } from "../types/Types";
+import { LoginProps } from "../pages/Login";
 
 export type AuthState = {
-    user: UserProps | null;
+    user: LoginProps | null;
     loading: boolean;
     error: unknown | null;
   };
   
   export type AuthAction =
     | { type: "LOGIN_START" }
-    | { type: "LOGIN_SUCCESS"; payload: UserProps }
+    | { type: "LOGIN_SUCCESS"; payload: LoginProps }
     | { type: "LOGIN_FAILED"; payload: unknown }
     | { type: "LOGOUT" };
   
