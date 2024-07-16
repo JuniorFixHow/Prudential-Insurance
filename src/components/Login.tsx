@@ -94,13 +94,13 @@ function LoginSingup() {
         </div>
         <form onSubmit={loginMode ? handleLogin:handleSignup} className="flex gap-4 items-center w-full flex-col">
             <div className="flex p-2 flex-row gap-4 bg-slate-200 w-full rounded-xl">
-                <div className="p-2 bg-white rounded-lg">
+                <div className="p-2 bg-white rounded-lg flex flex-row items-center justify-center">
                     <AiOutlineMail color='blue' />
                 </div>
                 <input onChange={(e)=>setEmail(e.target.value)} className='px-2 grow bg-transparent border-none outline-none' placeholder='enter email' type="email" required />
             </div>
             <div className="flex p-2 items-center flex-row gap-4 bg-slate-200 w-full rounded-xl">
-                <div className="p-2 bg-white rounded-lg">
+                <div className="p-2 bg-white rounded-lg flex flex-row items-center justify-center">
                     <IoLockClosedOutline color='blue' />
                 </div>
                 <input onChange={(e)=>setPassword(e.target.value)} className='px-2 grow bg-transparent border-none outline-none' placeholder='enter password' type={showEye ? "text":"password"} required />
@@ -114,7 +114,7 @@ function LoginSingup() {
             {
                 !loginMode &&
                 <div className="flex p-2 items-center flex-row gap-4 bg-slate-200 w-full rounded-xl">
-                    <div className="p-2 bg-white rounded-lg">
+                    <div className="p-2 bg-white rounded-lg flex flex-row items-center justify-center">
                         <IoLockClosedOutline color='blue' />
                     </div>
                     <input onChange={(e)=>setCpass(e.target.value)} className='px-2 grow bg-transparent border-none outline-none' placeholder='repeat password' type={showRepeat ? "text":"password"} required />
