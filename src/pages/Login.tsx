@@ -41,7 +41,7 @@ const Login = () => {
     }
   return (
     <div className='w-full h-screen flex items-center flex-col gap-8 justify-center radial-blue' >
-        <h2 className='text-2xl font-bold text-center' >Welcome back, Admin</h2>
+        <h2 className='text-2xl font-bold text-center overflow-hidden' >Welcome back, Admin</h2>
         <form onSubmit={handleLogin} className="bg-white p-4 items-center flex flex-col justify-center w-80 shadow-2xl rounded gap-4">
             <input onChange={handleTextChange} required className='w-full border-none outline-none rounded-lg px-4 py-2 bg-slate-100' name='username' type="text" placeholder='Enter username' />
             <input onChange={handleTextChange} required className='w-full border-none outline-none rounded-lg px-4 py-2 bg-slate-100' name='password' type="password" placeholder='Enter password' />

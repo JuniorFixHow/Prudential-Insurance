@@ -107,7 +107,7 @@ export const UsersTable = ({setCurrentData, search}:TableProps) => {
                     checkboxSelection
                 />
                 :
-                <span className='text-2xl font-semibold text-center w-full' >No Data</span>
+                <span className='text-2xl font-semibold text-center w-full overflow-hidden' >No Data</span>
             }
     </div>
     )

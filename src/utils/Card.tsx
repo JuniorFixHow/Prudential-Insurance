@@ -27,36 +27,38 @@ const Card = ({currentData, setCurrentData}:CardProps) => {
   aria-describedby="modal-modal-description"
 >
  <div onClick={()=>setCurrentData(null)} className="flex cursor-pointer w-full h-full items-center justify-center">
- <div className="flex w-[90%] md:w-2/3 lg:w-1/2 p-4 rounded-xl z-10 cursor-default bg-white flex-col gap-4 items-center">
+ <div className="flex w-5/6 md:w-2/3 lg:w-1/2 p-4 rounded-xl z-10 cursor-default bg-white flex-col gap-4 items-center">
     <img src={currentData?.photo} className='w-20 h-20 rounded-full object-cover' alt="photo" />
-    <div className="flex flex-col gap-4 w-full">
-        <div className="flex  md:flex-row md:gap-4 w-full justify-between">
-            <span className='font-semibold text-blue-700 flex-1 text-[0.9rem] md:text-[1rem] flex' >Staff name<span className='hidden md:flex' >:</span> </span>
-            <span className='font-medium flex flex-1 text-[0.9rem] md:text-[1rem]' >{currentData?.name || 'Not set'}</span>
-        </div>
-        <div className="flex  md:flex-row md:gap-4 w-full justify-between">
-            <span className='font-semibold text-blue-700 flex-1 text-[0.9rem] md:text-[1rem] flex' >Gender<span className='hidden md:flex' >:</span> </span>
-            <span className='font-medium flex flex-1 text-[0.9rem] md:text-[1rem]' >{currentData?.gender || 'Not set'}</span>
-        </div>
-        <div className="flex  md:flex-row md:gap-4 w-full justify-between">
-            <span className='font-semibold text-blue-700 flex-1 text-[0.9rem] md:text-[1rem] flex' >Email<span className='hidden md:flex' >:</span> </span>
-            <span className='font-medium flex flex-1 text-[0.9rem] md:text-[1rem]' >{currentData?.email || 'Not set'}</span>
-        </div>
-        <div className="flex  md:flex-row md:gap-4 w-full justify-between">
-            <span className='font-semibold text-blue-700 flex-1 text-[0.9rem] md:text-[1rem] flex' >Department<span className='hidden md:flex' >:</span> </span>
-            <span className='font-medium flex flex-1 text-[0.9rem] md:text-[1rem]' >{currentData?.department || 'Not set'}</span>
-        </div>
-        <div className="flex  md:flex-row md:gap-4 w-full justify-between">
-            <span className='font-semibold text-blue-700 flex-1 text-[0.9rem] md:text-[1rem] flex' >Title<span className='hidden md:flex' >:</span> </span>
-            <span className='font-medium flex flex-1 text-[0.9rem] md:text-[1rem]' >{currentData?.title || 'Not set'}</span>
-        </div>
-        <div className="flex  md:flex-row md:gap-4 w-full justify-between">
-            <span className='font-semibold text-blue-700 flex-1 text-[0.9rem] md:text-[1rem] flex' >Role<span className='hidden md:flex' >:</span> </span>
-            <span className='font-medium flex flex-1 text-[0.9rem] md:text-[1rem]' >{currentData?.role || 'Not set'}</span>
-        </div>
-        <div className="flex  md:flex-row md:gap-4 w-full justify-between">
-            <span className='font-semibold text-blue-700 flex-1 text-[0.9rem] md:text-[1rem] flex' >Last Certificate Date<span className='hidden md:flex' >:</span> </span>
-            <span className='font-medium flex flex-1 text-[0.9rem] md:text-[1rem]' >{ currentData?.lcd ? new Date(currentData?.lcd).toLocaleDateString() : 'Not set'}</span>
+    <div className='overflow-y-scroll lg:overflow-y-hidden overflow-x-hidden h-80 w-full' >
+        <div className="flex flex-col gap-4 w-full  ">
+            <div className="flex flex-col md:flex-row md:gap-4 w-full justify-between">
+                <span className='font-semibold text-blue-700 flex-1 text-[0.9rem] md:text-[1rem] flex' >Staff name<span className='hidden md:flex' >:</span> </span>
+                <span className='font-medium flex flex-1 text-[0.9rem] md:text-[1rem]' >{currentData?.name || 'Not set'}</span>
+            </div>
+            <div className="flex flex-col md:flex-row md:gap-4 w-full justify-between">
+                <span className='font-semibold text-blue-700 flex-1 text-[0.9rem] md:text-[1rem] flex' >Gender<span className='hidden md:flex' >:</span> </span>
+                <span className='font-medium flex flex-1 text-[0.9rem] md:text-[1rem]' >{currentData?.gender || 'Not set'}</span>
+            </div>
+            <div className="flex flex-col md:flex-row md:gap-4 w-full justify-between">
+                <span className='font-semibold text-blue-700 flex-1 text-[0.9rem] md:text-[1rem] flex' >Email<span className='hidden md:flex' >:</span> </span>
+                <span className='font-medium flex flex-1 text-[0.9rem] md:text-[1rem]' >{currentData?.email || 'Not set'}</span>
+            </div>
+            <div className="flex flex-col md:flex-row md:gap-4 w-full justify-between">
+                <span className='font-semibold text-blue-700 flex-1 text-[0.9rem] md:text-[1rem] flex' >Department<span className='hidden md:flex' >:</span> </span>
+                <span className='font-medium flex flex-1 text-[0.9rem] md:text-[1rem]' >{currentData?.department || 'Not set'}</span>
+            </div>
+            <div className="flex flex-col md:flex-row md:gap-4 w-full justify-between">
+                <span className='font-semibold text-blue-700 flex-1 text-[0.9rem] md:text-[1rem] flex' >Title<span className='hidden md:flex' >:</span> </span>
+                <span className='font-medium flex flex-1 text-[0.9rem] md:text-[1rem]' >{currentData?.title || 'Not set'}</span>
+            </div>
+            <div className="flex flex-col md:flex-row md:gap-4 w-full justify-between">
+                <span className='font-semibold text-blue-700 flex-1 text-[0.9rem] md:text-[1rem] flex' >Role<span className='hidden md:flex' >:</span> </span>
+                <span className='font-medium flex flex-1 text-[0.9rem] md:text-[1rem]' >{currentData?.role || 'Not set'}</span>
+            </div>
+            <div className="flex flex-col md:flex-row md:gap-4 w-full justify-between">
+                <span className='font-semibold text-blue-700 flex-1 text-[0.9rem] md:text-[1rem] flex' >Last Certificate Date<span className='hidden md:flex' >:</span> </span>
+                <span className='font-medium flex flex-1 text-[0.9rem] md:text-[1rem]' >{ currentData?.lcd ? new Date(currentData?.lcd).toLocaleDateString() : 'Not set'}</span>
+            </div>
         </div>
     </div>
 

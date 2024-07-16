@@ -6,3 +6,10 @@
 .radial-blue{
   background: radial-gradient(red, #fff);
 }
+
+*, html, body{
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
