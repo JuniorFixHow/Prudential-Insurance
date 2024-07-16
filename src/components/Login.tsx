@@ -83,6 +83,7 @@ function LoginSingup() {
             setIsLoading(false);
         }
     }
+    
   return (
     <div className='flex gap-8 flex-col lg:bg-white w-full lg:w-1/2  h-full items-center justify-center' >
         <div className="w-5/6 md:w-2/3 flex flex-col gap-6 self-center">
