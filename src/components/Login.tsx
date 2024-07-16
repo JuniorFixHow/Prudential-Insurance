@@ -85,7 +85,7 @@ function LoginSingup() {
     }
   return (
     <div className='flex gap-8 flex-col lg:bg-white w-full lg:w-1/2  h-full items-center justify-center' >
-        <div className="w-80 lg:w-2/3 flex flex-col gap-6 self-center">
+        <div className="w-5/6 md:w-2/3 flex flex-col gap-6 self-center">
 
         <div className="flex mt-8 flex-col w-full">
             <span className='font-semibold text-2xl' >{loginMode ? 'Login':'Create a new account'}</span>
