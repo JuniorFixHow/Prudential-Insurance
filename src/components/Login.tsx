@@ -34,7 +34,12 @@ function LoginSingup() {
             }
         } catch (error:unknown) {
             console.log(error);
-            setFeedback({error:true, message:error?.response?.data})
+            if (axios.isAxiosError(error)) {
+                setFeedback({ error: true, message: error.response?.data });
+              } else {
+                console.log(error);
+                setFeedback({ error: true, message: 'An unknown error occurred' });
+              }
 
         }finally{
             setIsLoading(false);
@@ -68,7 +73,12 @@ function LoginSingup() {
             }
         } catch (error:unknown) {
             console.log(error);
-            setFeedback({error:true, message:error?.response?.data})
+            if (axios.isAxiosError(error)) {
+                setFeedback({ error: true, message: error.response?.data });
+              } else {
+                console.log(error);
+                setFeedback({ error: true, message: 'An unknown error occurred' });
+              }
         }finally{
             setIsLoading(false);
         }
