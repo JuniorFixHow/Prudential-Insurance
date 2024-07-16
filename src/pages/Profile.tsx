@@ -100,14 +100,7 @@ const Profile = () => {
   }
 
   // console.log(new Date(state?.user?.lcd).toISOString().slice(0, 16));
-  const getLCDDate = ()=>{
-    let date;
-    if(state.user?.lcd){
-      date = state.user?.lcd.toISOString().slice(0, 16)
-    }else{
-      date = new Date().toISOString().slice(0, 16)
-    }
-  }
+
   useEffect(()=>{
     uploadPhoto();
   },[photo])
