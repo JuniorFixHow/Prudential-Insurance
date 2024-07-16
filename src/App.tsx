@@ -7,8 +7,6 @@ function App() {
 
   return (
     <div className="w-full flex justify-center items-start bg-[#F6F7F9]" >
-      {/* <AuthScreen/> */}
-      {/* <Profile /> */}
       <Routes>
         <Route path="auth" element={<AuthScreen />} />
         <Route path="/" element={<Profile />} />
