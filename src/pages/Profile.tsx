@@ -106,7 +106,7 @@ const Profile = () => {
   },[photo])
 
   return (
-    <div className="flex w-full flex-col gap-8 items-center min-h-screen relative" >
+    <div className="flex w-full flex-col gap-8 items-center min-h-screen relative pb-8" >
       {
         feedback.message &&
         <Alert onClose={()=>setFeedback({error:false, message:''})} severity={feedback.error ? 'error':'success'} className="absolute top-8" >{feedback.message}</Alert>
